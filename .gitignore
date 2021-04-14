@@ -1,0 +1,8 @@
+/CivopApp.Tests/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs
+/CivopApp.Tests/obj/Debug/CivopApp.Tests.csprojAssemblyReference.cache
+/CivopApp.Tests/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+*.suo
+bin
+packages
+obj
+Debug

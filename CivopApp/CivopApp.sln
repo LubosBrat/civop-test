@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31105.61
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CivopApp", "CivopApp.csproj", "{50C1C768-649B-4290-878A-6E3DB1E0DCAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CivopApp.Tests", "..\CivopApp.Tests\CivopApp.Tests.csproj", "{3B70DD3B-CE23-45FA-A0C8-E12443638BFA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50C1C768-649B-4290-878A-6E3DB1E0DCAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50C1C768-649B-4290-878A-6E3DB1E0DCAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50C1C768-649B-4290-878A-6E3DB1E0DCAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50C1C768-649B-4290-878A-6E3DB1E0DCAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B70DD3B-CE23-45FA-A0C8-E12443638BFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B70DD3B-CE23-45FA-A0C8-E12443638BFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B70DD3B-CE23-45FA-A0C8-E12443638BFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B70DD3B-CE23-45FA-A0C8-E12443638BFA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {31A6D08D-99F2-4603-A9CC-2FFD8BD61070}
+	EndGlobalSection
+EndGlobal
