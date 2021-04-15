@@ -6,3 +6,6 @@ bin
 packages
 obj
 Debug
+/CivopApp/.vs/CivopApp/v16/TestStore/0
+/CivopApp/_NCrunch_CivopApp
+*.ncrunchsolution

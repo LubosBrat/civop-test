@@ -16,5 +16,7 @@ namespace CivopApp.Core
         DbSet<Product> Products { get; set; }
         DbSet<Order> Orders { get; set; }
         DbSet<OrderProduct> OrderProducts { get; set; }
+
+        int SaveChanges();
     }
 }

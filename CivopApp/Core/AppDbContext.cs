@@ -6,7 +6,7 @@ namespace CivopApp.Core
 {
     public class AppDbContext : DbContext, IAppDbContext
     {
-        public AppDbContext()
+        public AppDbContext() : base("name=CivopDb")
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<AppDbContext, Configuration>());
         }

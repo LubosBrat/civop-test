@@ -8,7 +8,7 @@ using CivopApp.Core;
 
 namespace CivopApp
 {
-    public class Global : HttpApplication
+    public class Global : HttpApplication, IContainerProviderAccessor
     {
         // Autofac IoC container
         private static IContainerProvider _containerProvider;
