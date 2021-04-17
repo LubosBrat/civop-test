@@ -234,6 +234,9 @@
       <DependentUpon>202104141903115_InitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\BasePageModel.cs" />
+    <Compile Include="Models\IBasePageModel.cs" />
+    <Compile Include="Presenters\AboutPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -256,6 +259,8 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Views\IAboutView.cs" />
+    <Compile Include="Views\IBasePageView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

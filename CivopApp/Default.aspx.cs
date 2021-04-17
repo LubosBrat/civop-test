@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 
 namespace CivopApp
 {
@@ -7,7 +6,7 @@ namespace CivopApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            var products = DbContext.Products.ToList();
+            //var products = DbContext.Products.ToList();
         }
     }
 }

@@ -3,14 +3,12 @@ using System.Web;
 using System.Web.UI;
 using Autofac;
 using Autofac.Integration.Web;
-using CivopApp.Core;
+using CivopApp.Views;
 
 namespace CivopApp
 {
-    public class BasePage : Page
+    public class BasePage : Page, IPageViewBase
     {
-        public IAppDbContext DbContext { get; set; }
-
         protected override void OnInit(EventArgs e)
         {
             var cpa = (IContainerProviderAccessor)HttpContext.Current.ApplicationInstance;
