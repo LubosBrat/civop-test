@@ -160,6 +160,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="ProductPage.aspx" />
     <Content Include="Products.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -238,7 +239,16 @@
     <Compile Include="Models\BasePageModel.cs" />
     <Compile Include="Models\IBasePageModel.cs" />
     <Compile Include="Presenters\AboutPresenter.cs" />
+    <Compile Include="Presenters\PresenterBase.cs" />
+    <Compile Include="Presenters\ProductPresenter.cs" />
     <Compile Include="Presenters\ProductsPresenter.cs" />
+    <Compile Include="ProductPage.aspx.cs">
+      <DependentUpon>ProductPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductPage.aspx.designer.cs">
+      <DependentUpon>ProductPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Products.aspx.cs">
       <DependentUpon>Products.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -271,6 +281,7 @@
     <Compile Include="Views\IAboutView.cs" />
     <Compile Include="Views\IBasePageView.cs" />
     <Compile Include="Views\IProductsView.cs" />
+    <Compile Include="Views\IProductView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

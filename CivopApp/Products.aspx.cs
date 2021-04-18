@@ -13,7 +13,7 @@ namespace CivopApp
 
         public Products()
         {
-            _presenter = new ProductsPresenter(this, new AppDbContext());
+            _presenter = new ProductsPresenter(this, DbContext);
         }
 
 
@@ -24,6 +24,7 @@ namespace CivopApp
             GridView1.DataBind();
         }
 
+        /// <inheritdoc/>
         public ObservableCollection<Product> Data { get; set; }
     }
 }

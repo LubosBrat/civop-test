@@ -12,7 +12,8 @@ namespace CivopApp
     [InjectProperties]
     public class BasePage : Page, IPageViewBase
     {
-        protected IAppDbContext DbContext { get; set; }
+        private IAppDbContext _dbContext;
+        protected IAppDbContext DbContext => _dbContext ?? (_dbContext = new AppDbContext());
 
         protected override void OnInit(EventArgs e)
         {

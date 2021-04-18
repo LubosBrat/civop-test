@@ -4,10 +4,8 @@ using CivopApp.Views;
 
 namespace CivopApp.Tests.Mock
 {
-    public class ProductsPageMock : IProductsView
+    public class ProductsPageMock : PageMockBase, IProductsView
     {
-        public string Title { get; set; }
-        public string MetaDescription { get; set; }
         public ObservableCollection<Product> Data { get; set; }
     }
 }

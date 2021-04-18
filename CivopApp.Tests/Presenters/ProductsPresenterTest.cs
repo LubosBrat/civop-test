@@ -33,6 +33,14 @@ namespace CivopApp.Tests.Presenters
         }
 
 
+        [TestMethod]
+        public void OnLoadPage_SetsProperties()
+        {
+            Assert.IsNull(_viewMock.Title);
+            _presenter.OnLoadPage();
+            Assert.IsFalse(string.IsNullOrEmpty(_viewMock.Title));
+        }
+
         private void CreateTestData()
         {
             _dbContext.Products.Add(TestCommon.TestProduct1);

@@ -9,15 +9,13 @@ namespace CivopApp.Presenters
     /// <summary>
     /// Presenter for products
     /// </summary>
-    public class ProductsPresenter
+    public class ProductsPresenter : PresenterBase
     {
         private readonly IProductsView _view;
-        private readonly IAppDbContext _dbContext;
 
-        public ProductsPresenter(IProductsView view, IAppDbContext dbContext)
+        public ProductsPresenter(IProductsView view, IAppDbContext dbContext) : base(dbContext)
         {
             _view = view;
-            _dbContext = dbContext;
         }
 
         /// <summary>
@@ -25,8 +23,13 @@ namespace CivopApp.Presenters
         /// </summary>
         public void LoadProducts()
         {
-            var products = _dbContext.Products.ToList();
+            var products = DbContext.Products.ToList();
             _view.Data = new ObservableCollection<Product>(products);
+        }
+
+        public override void OnLoadPage()
+        {
+            _view.Title = "Seznam produktů";
         }
     }
 }
