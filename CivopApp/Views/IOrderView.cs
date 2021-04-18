@@ -33,6 +33,9 @@ namespace CivopApp.Views
         /// </summary>
         float Quantity { get; set; }
 
+        /// <summary>
+        /// Products attached to the <see cref="Order"/>
+        /// </summary>
         IList<OrderProduct> Products { get; set; }
 
         /// <summary>

@@ -32,18 +32,21 @@ namespace CivopApp
         /// </summary>
         public Product Product { get; set; }
 
+        /// <inheritdoc/>
         public string ProductName
         {
             get => txtName.Text;
             set => txtName.Text = value; 
         }
 
+        /// <inheritdoc/>
         public string ProductCode
         {
             get => txtCode.Text;
             set => txtCode.Text = value;
         }
 
+        /// <inheritdoc/>
         public decimal ProductPrice
         {
             get
@@ -54,6 +57,7 @@ namespace CivopApp
             set => txtPrice.Text = value.ToString();
         }
 
+        /// <inheritdoc/>
         public int? ProductId
         {
             get

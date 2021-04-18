@@ -19,6 +19,7 @@ namespace CivopApp
             _presenter.OnLoadPage();
         }
 
+        /// <inheritdoc/>
         public string Text { get; set; }
     }
 }

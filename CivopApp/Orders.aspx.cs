@@ -23,6 +23,7 @@ namespace CivopApp
             GridView1.DataBind();
         }
 
+        /// <inheritdoc/>
         public ObservableCollection<OrderViewModel> Data { get; set; }
     }
 }
