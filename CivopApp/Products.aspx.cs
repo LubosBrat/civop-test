@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.ObjectModel;
-using CivopApp.Core;
 using CivopApp.Domain;
 using CivopApp.Presenters;
 using CivopApp.Views;

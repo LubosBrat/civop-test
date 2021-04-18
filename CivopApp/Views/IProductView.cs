@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CivopApp.Domain;
 
 namespace CivopApp.Views
 {
@@ -11,5 +7,14 @@ namespace CivopApp.Views
     /// </summary>
     public interface IProductView : IPageViewBase
     {
+        /// <summary>
+        /// Id produktu při editaci, null pokud jde o vytváření nového produktu
+        /// </summary>
+        Product Product { get; set; }
+
+        string ProductName { get; set; }
+        string ProductCode { get; set; }
+        decimal ProductPrice { get; set; }
+        int? ProductId { get; set; }
     }
 }
