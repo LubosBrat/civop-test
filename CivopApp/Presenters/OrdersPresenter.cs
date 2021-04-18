@@ -1,6 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using System.Linq;
 using CivopApp.Core;
+using CivopApp.Domain;
 using CivopApp.Models;
 using CivopApp.Views;
 
@@ -27,7 +28,7 @@ namespace CivopApp.Presenters
 
         private void LoadOrders()
         {
-            var orders = DbContext.Orders.Include("Products").ToList().Select(x => new OrderViewModel(x));
+            var orders = DbContext.Orders.Include("Products").ToList().Select(x => new OrderViewModel(x)).ToList();
             _view.Data = new ObservableCollection<OrderViewModel>(orders);
         }
 

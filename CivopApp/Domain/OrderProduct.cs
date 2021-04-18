@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CivopApp.Domain
 {
@@ -37,5 +38,11 @@ namespace CivopApp.Domain
         /// Quantity with information how many <see cref="Product"/>s are attached to particular <see cref="Order"/>
         /// </summary>
         public float Quantity { get; set; }
+
+        /// <summary>
+        /// Price of the item in time of ordering
+        /// </summary>
+        [Column(TypeName = "money")]
+        public decimal Price { get; set; }
     }
 }

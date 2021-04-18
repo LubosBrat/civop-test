@@ -35,6 +35,7 @@ namespace CivopApp.Tests.Model
                 OrderId = 1,
                 Product = TestCommon.TestProduct1,
                 ProductId = TestCommon.TestProduct1.Id,
+                Price = TestCommon.TestProduct1.Price,
                 Quantity = 5
             });
             _model = new OrderViewModel(_testOrder);

@@ -229,6 +229,10 @@
     <Compile Include="Migrations\202104141903115_InitialMigration.designer.cs">
       <DependentUpon>202104141903115_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104181846090_AddsPriceToOrderProduct.cs" />
+    <Compile Include="Migrations\202104181846090_AddsPriceToOrderProduct.designer.cs">
+      <DependentUpon>202104181846090_AddsPriceToOrderProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\OrderViewModel.cs" />
     <Compile Include="OrderPage.aspx.cs">
@@ -311,6 +315,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202104141903115_InitialMigration.resx">
       <DependentUpon>202104141903115_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104181846090_AddsPriceToOrderProduct.resx">
+      <DependentUpon>202104181846090_AddsPriceToOrderProduct.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

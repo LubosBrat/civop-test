@@ -53,7 +53,7 @@ namespace CivopApp.Presenters
                 var product = DbContext.Products.Find(_view.ProductId);
                 if (product != null && IsNewOrder) // new Order and new OrderProduct
                 {
-                    order.Products = new List<OrderProduct>() { new OrderProduct()  { Order = order, Product = product } };
+                    order.Products = new List<OrderProduct>() { new OrderProduct()  { Order = order, Product = product, Quantity = _view.Quantity, Price = product.Price } };
                     DbContext.Orders.AddOrUpdate(order);
                 } else if (product != null && !IsNewOrder) // existing Order 
                 {
@@ -61,6 +61,7 @@ namespace CivopApp.Presenters
                     if (productOrder != null) // existing Order and updating existing OrderProduct
                     {
                         productOrder.Quantity = _view.Quantity;
+                        productOrder.Price = product.Price;
                         DbContext.OrderProducts.AddOrUpdate(productOrder);
                     }
                     else    // existing Order and adding new OrderProduct
@@ -69,7 +70,8 @@ namespace CivopApp.Presenters
                         {
                             Order = order, 
                             Product = product,
-                            Quantity = _view.Quantity
+                            Quantity = _view.Quantity,
+                            Price = product.Price
                         });
 
                     }

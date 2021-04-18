@@ -16,7 +16,7 @@ namespace CivopApp.Models
             CustomerPostAddress = o.CustomerPostAddress;
             UtcDateCreated = o.UtcDateCreated;
             ProductsCount = o.Products.Sum(x => x.Quantity);
-            TotalPrice = o.Products.Sum(x => Convert.ToDecimal(x.Quantity) * x.Product.Price);
+            TotalPrice = o.Products.Sum(x => Convert.ToDecimal(x.Quantity) * x.Price);
         }
 
         /// <summary>
