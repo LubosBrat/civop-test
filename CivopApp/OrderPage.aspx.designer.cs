@@ -42,6 +42,24 @@ namespace CivopApp
         protected global::System.Web.UI.WebControls.TextBox txtCustomerPostAddress;
 
         /// <summary>
+        /// gridProduts control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gridProduts;
+
+        /// <summary>
+        /// ProductPanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel ProductPanel;
+
+        /// <summary>
         /// dropdownProduct control.
         /// </summary>
         /// <remarks>
@@ -67,6 +85,15 @@ namespace CivopApp
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAddProduct;
+
+        /// <summary>
+        /// btnAddNewProduct control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAddNewProduct;
 
         /// <summary>
         /// btnSubmit control.

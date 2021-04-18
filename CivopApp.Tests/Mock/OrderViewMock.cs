@@ -9,7 +9,9 @@ namespace CivopApp.Tests.Mock
         public string CustomerName { get; set; }
         public string CustomerPostAddress { get; set; }
         public int? OrderId { get; set; }
+        public string OrderIdQs { get; set; }
         public int? ProductId { get; set; }
+        public string ProductIdQs { get; set; }
         public float Quantity { get; set; }
         public IList<OrderProduct> Products { get; set; }
         public IList<Product> AllProducts { get; set; }

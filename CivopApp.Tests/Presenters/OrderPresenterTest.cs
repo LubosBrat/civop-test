@@ -34,7 +34,7 @@ namespace CivopApp.Tests.Presenters
         [TestMethod]
         public void OnLoadPage_LoadsOrder()
         {
-            _viewMock.OrderId = _testOrder.Id; 
+            _viewMock.OrderIdQs = _testOrder.Id.ToString(); 
             _presenter.OnLoadPage();
             Assert.AreEqual(_testOrder.Id, _viewMock.OrderId);
             Assert.AreEqual(_testOrder.CustomerName, _viewMock.CustomerName);

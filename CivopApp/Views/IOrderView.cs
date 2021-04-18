@@ -24,9 +24,19 @@ namespace CivopApp.Views
         int? OrderId { get; set; }
 
         /// <summary>
+        /// RAW value of <see cref="OrderId"/> in QueryString
+        /// </summary>
+        string OrderIdQs { get; set; }
+
+        /// <summary>
         /// Selected product Id
         /// </summary>
         int? ProductId { get; set; }
+
+        /// <summary>
+        /// RAW value of <see cref="ProductId"/> in QueryString
+        /// </summary>
+        string ProductIdQs { get; set; }
 
         /// <summary>
         /// Quantity of <see cref="Product"/> appended to the Order

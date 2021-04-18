@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity.Core;
 using System.Data.Entity.Migrations;
 using System.Linq;
@@ -24,19 +25,26 @@ namespace CivopApp.Presenters
         {
             _view.Title = "Detail objednávky";
             _view.AllProducts = DbContext.Products.ToList();
-            if (_view.OrderId == null) return;
+            if (string.IsNullOrEmpty(_view.OrderIdQs)) return;
+            _view.OrderId = Convert.ToInt32(_view.OrderIdQs);
             var order = DbContext.Orders.Include("Products").FirstOrDefault(x => x.Id == _view.OrderId);
             if (order == null) return;
 
             _view.CustomerName = order.CustomerName;
             _view.CustomerPostAddress = order.CustomerPostAddress;
             _view.Products = order.Products.ToList();
+
+            if (string.IsNullOrEmpty(_view.ProductIdQs)) return;
+            _view.ProductId = Convert.ToInt32(_view.ProductIdQs);
+            var product = order.Products.FirstOrDefault(x => x.ProductId == Convert.ToInt32(_view.ProductIdQs));
+            _view.Quantity = product?.Quantity ?? 0;
         }
 
         /// <summary>
         /// Saves current new or existing order with new or existing product
+        /// Returns id of the order
         /// </summary>
-        public void SaveOrder()
+        public int SaveOrder()
         {
             var order = IsNewOrder
                 ? new Order() 
@@ -84,6 +92,7 @@ namespace CivopApp.Presenters
             }
 
             DbContext.SaveChanges();
+            return order.Id;
         }
 
 

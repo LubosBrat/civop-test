@@ -10,6 +10,7 @@ namespace CivopApp
     {
         private readonly OrderPresenter _presenter;
         private const string REDIRECT_URL = "~/Orders";
+        private const string REDIRECT_DETAIL_URL = "~/OrderPage?orderId=";
 
         public OrderPage()
         {
@@ -18,9 +19,18 @@ namespace CivopApp
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            OrderIdQs = Request.QueryString["orderId"];
+            ProductIdQs = Request.QueryString["productId"];
+            ProductPanel.Visible = ProductIdQs != null || OrderIdQs == null;
+            btnAddNewProduct.Visible = !ProductPanel.Visible;
+            if (Page.IsPostBack) return;
+
             _presenter.OnLoadPage();
             dropdownProduct.DataSource = AllProducts;
             dropdownProduct.DataBind();
+
+            gridProduts.DataSource = Products;
+            gridProduts.DataBind();
         }
 
         protected void btnSubmit_OnClick(object sender, EventArgs e)
@@ -31,7 +41,8 @@ namespace CivopApp
 
         protected void btnAddProduct_OnClick(object sender, EventArgs e)
         {
-            _presenter.SaveOrder();
+            var orderId = _presenter.SaveOrder();
+            Response.Redirect($"{REDIRECT_DETAIL_URL}{orderId}");
         }
 
         protected void btnSubmit_Delete(object sender, EventArgs e)
@@ -68,10 +79,14 @@ namespace CivopApp
         }
 
         /// <inheritdoc />
-        public int? ProductId
+        public string OrderIdQs { get; set; }
+
+        /// <inheritdoc />
+        public int? ProductId 
         {
             get
             {
+                if (!ProductPanel.Visible) return null;
                 if (int.TryParse(dropdownProduct.SelectedValue, out var id))
                     return id;
                 return null;
@@ -81,6 +96,9 @@ namespace CivopApp
                 dropdownProduct.SelectedValue = value.ToString();
             }
         }
+
+        /// <inheritdoc />
+        public string ProductIdQs { get; set; }
 
         /// <inheritdoc />
         public float Quantity
@@ -100,6 +118,10 @@ namespace CivopApp
         /// <inheritdoc />
         public IList<Product> AllProducts { get; set; }
 
-     
+
+        protected void btnAddNewProduct_OnClick(object sender, EventArgs e)
+        {
+            Response.Redirect($"{REDIRECT_DETAIL_URL}{OrderIdQs}&productId=");
+        }
     }
 }
