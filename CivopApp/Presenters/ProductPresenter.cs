@@ -24,6 +24,9 @@ namespace CivopApp.Presenters
             _view.Title = "Detail produktu";
         }
 
+        /// <summary>
+        /// Loads edited product from database
+        /// </summary>
         public void LoadProduct(string productId)
         {
             if (string.IsNullOrEmpty(productId)) return;
@@ -35,6 +38,9 @@ namespace CivopApp.Presenters
             _view.ProductPrice = _view.Product.Price;
         }
 
+        /// <summary>
+        /// Saves or creates product in Db
+        /// </summary>
         public void SaveProduct()
         {
             var savedProduct = _view.ProductId == null 
@@ -46,6 +52,20 @@ namespace CivopApp.Presenters
 
             ReadsForm(savedProduct);
             DbContext.Products.AddOrUpdate(savedProduct);
+            DbContext.SaveChanges();
+        }
+
+        /// <summary>
+        /// Removes current product from database
+        /// </summary>
+        public void DeleteProduct()
+        {
+            if (_view.ProductId == null) return;
+            var product = DbContext.Products.Find(_view.ProductId);
+            if (product == null)
+                throw new ObjectNotFoundException("Mazaný produkt nexistuje v databázi");
+
+            DbContext.Products.Remove(product);
             DbContext.SaveChanges();
         }
 

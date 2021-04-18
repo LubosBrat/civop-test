@@ -89,6 +89,18 @@ namespace CivopApp.Tests.Presenters
 
         }
 
+        [TestMethod]
+        public void DeleteProduct_RemovesProductFromDb()
+        {
+            StoreTestProduct();
+            var productsTotal = TestDbContext.Instance.Products.Count();
+            Assert.AreEqual(1, productsTotal);
+            _viewMock.ProductId = _testProduct.Id;
+            _presenter.DeleteProduct();
+            productsTotal = TestDbContext.Instance.Products.Count();
+            Assert.AreEqual(0, productsTotal);
+        }
+
         private void InjectTestProductData()
         {
             _viewMock.ProductName = _testProduct.Name;
