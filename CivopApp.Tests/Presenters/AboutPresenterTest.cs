@@ -15,13 +15,13 @@ namespace CivopApp.Tests.Presenters
         public void Setup()
         {
             _viewMock = new Mock<IAboutView>();
-            _presenter = new AboutPresenter(_viewMock.Object);
+            _presenter = new AboutPresenter(_viewMock.Object, TestDbContext.Instance);
         }
 
         [TestMethod]
         public void Init_SetsProperties()
         {
-            _presenter.Init();
+            _presenter.OnLoadPage();
             _viewMock.VerifySet(x => x.Title = It.IsAny<string>());
             _viewMock.VerifySet(x => x.MetaDescription = It.IsAny<string>());
             _viewMock.VerifySet(x => x.Text = It.IsAny<string>());

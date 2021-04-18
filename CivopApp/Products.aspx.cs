@@ -18,6 +18,7 @@ namespace CivopApp
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            _presenter.OnLoadPage();
             _presenter.LoadProducts();
             GridView1.DataSource = Data;
             GridView1.DataBind();

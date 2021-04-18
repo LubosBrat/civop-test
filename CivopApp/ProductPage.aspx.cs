@@ -20,10 +20,10 @@ namespace CivopApp
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            _presenter.OnLoadPage();
             if (Page.IsPostBack) return;
             var productId = Request.QueryString["productId"];
             _presenter.LoadProduct(productId);
-            _presenter.OnLoadPage();
             btnDelete.Visible = ProductId != null;
         }
 

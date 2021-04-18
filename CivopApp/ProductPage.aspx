@@ -1,6 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ProductPage.aspx.cs" MasterPageFile="~/Site.Master" Inherits="CivopApp.ProductPage" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <h2><%: Title %></h2>
     <asp:HiddenField ID="hdnProductId" runat="server" />
     <div class="form-group">
         <asp:Label runat="server" Text="Kód" AssociatedControlID="txtCode"></asp:Label>

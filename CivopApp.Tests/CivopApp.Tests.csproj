@@ -76,9 +76,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\AppDbContextTest.cs" />
+    <Compile Include="Mock\OrderViewMock.cs" />
+    <Compile Include="Mock\OrdesViewMock.cs" />
     <Compile Include="Mock\PageMockBase.cs" />
     <Compile Include="Mock\ProductPageMock.cs" />
+    <Compile Include="Model\OrderViewModelTest.cs" />
     <Compile Include="Presenters\AboutPresenterTest.cs" />
+    <Compile Include="Presenters\OrderPresenterTest.cs" />
+    <Compile Include="Presenters\OrdersPresenterTest.cs" />
     <Compile Include="Presenters\ProductPresenterTest.cs" />
     <Compile Include="Presenters\ProductsPresenterTest.cs" />
     <Compile Include="Mock\ProductsPageMock.cs" />

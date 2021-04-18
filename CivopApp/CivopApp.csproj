@@ -141,7 +141,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -160,6 +159,8 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="OrderPage.aspx" />
+    <Content Include="Orders.aspx" />
     <Content Include="ProductPage.aspx" />
     <Content Include="Products.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -209,13 +210,6 @@
     <Compile Include="BasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Core\AppDbContext.cs" />
     <Compile Include="Core\IAppDbContext.cs" />
     <Compile Include="Default.aspx.cs">
@@ -236,9 +230,24 @@
       <DependentUpon>202104141903115_InitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\BasePageModel.cs" />
-    <Compile Include="Models\IBasePageModel.cs" />
+    <Compile Include="Models\OrderViewModel.cs" />
+    <Compile Include="OrderPage.aspx.cs">
+      <DependentUpon>OrderPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderPage.aspx.designer.cs">
+      <DependentUpon>OrderPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Orders.aspx.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Orders.aspx.designer.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Presenters\AboutPresenter.cs" />
+    <Compile Include="Presenters\OrderPresenter.cs" />
+    <Compile Include="Presenters\OrdersPresenter.cs" />
     <Compile Include="Presenters\PresenterBase.cs" />
     <Compile Include="Presenters\ProductPresenter.cs" />
     <Compile Include="Presenters\ProductsPresenter.cs" />
@@ -280,6 +289,8 @@
     </Compile>
     <Compile Include="Views\IAboutView.cs" />
     <Compile Include="Views\IBasePageView.cs" />
+    <Compile Include="Views\IOrdersView.cs" />
+    <Compile Include="Views\IOrderView.cs" />
     <Compile Include="Views\IProductsView.cs" />
     <Compile Include="Views\IProductView.cs" />
   </ItemGroup>

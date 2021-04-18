@@ -9,6 +9,12 @@ namespace CivopApp.Domain
     /// </summary>
     public class Order
     {
+        public Order()
+        {
+            Products = new List<OrderProduct>();
+            UtcDateCreated = DateTime.UtcNow;
+        }
+
         /// <summary>
         /// Primary key of the Order
         /// </summary>

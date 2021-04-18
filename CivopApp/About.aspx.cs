@@ -11,12 +11,12 @@ namespace CivopApp
 
         public About()
         {
-            _presenter = new AboutPresenter(this);
+            _presenter = new AboutPresenter(this, DbContext);
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            _presenter.Init();
+            _presenter.OnLoadPage();
         }
 
         public string Text { get; set; }
