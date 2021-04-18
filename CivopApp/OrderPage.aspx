@@ -38,10 +38,11 @@
                     <asp:Label runat="server" AssociatedControlID="txtProductQty" Text="Množství ks"></asp:Label>
                     <asp:TextBox runat="server" ID="txtProductQty" Width="30"></asp:TextBox>
                 </div>
+                <div class="form-group">
+                    <asp:Button runat="server" ID="btnAddProduct" OnClick="btnAddProduct_OnClick" Text="Uložit" />
+                </div>
             </div>
-            <div class="form-group">
-                <asp:Button runat="server" ID="btnAddProduct" OnClick="btnAddProduct_OnClick" Text="Uložit" />
-            </div>
+            
         </asp:Panel>
         <asp:Button runat="server" ID="btnAddNewProduct" OnClick="btnAddNewProduct_OnClick" Text="Přidat produkt" />
     </div>

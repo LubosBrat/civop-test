@@ -18,9 +18,10 @@ namespace CivopApp.Presenters
 
         public override void OnLoadPage()
         {
-            _view.Title = "O CIVOP aplikaci";
-            _view.MetaDescription = "Toto je testovací stránka o aplikaci CIVOP. Meta description";
-            _view.Text = "Textový popisek stránky :-). Nastavení obsahu pokryto testy.";
+            _view.Title = "O společnosti CIVOP";
+            _view.MetaDescription = "Společnost zahájila činnost v Praze v roce 1993 jako malá rodinná firma. ";
+            _view.Text = @"<p>To umožnilo společnosti vyrůst postupně na jednu z největších firem v oboru  a se zodpovědností za více než cca 6.500 pracovišť našich klientů na celém území ČR a SR.</p>
+                        <p>Aktuálně dáváme velký důraz na synergii všech našich základních služeb BOZP, PO, ŽP a revizí.Principem je aby měl klient vše řízeno z jednoho bodu na stejné úrovni kvality a v jednotném systému, kterým je unikátní Civop System.</p>";
         }
     }
 }

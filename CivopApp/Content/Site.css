@@ -29,3 +29,18 @@ textarea {
         padding: 0;
     }
 }
+
+table td, table th {
+    padding: 5px;
+}
+
+table {
+    margin-bottom: 1em;
+}
+
+.form-group label { width: 80px; }
+
+#MainContent_ProductPanel { display: flex; flex-direction: column; }
+#MainContent_ProductPanel .row { margin-left: 0; margin-right: 0; flex-direction: row; display: flex; width: 100%;}
+#MainContent_ProductPanel .form-group { width: fit-content; margin-right: 1em; display: flex;}
+#MainContent_ProductPanel .form-group label { width: fit-content; margin-right: 0.5em; margin-bottom: 0; margin-top: 3px; }
